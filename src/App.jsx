@@ -6,7 +6,7 @@ import Chatmessage from './Components/Chatmessage'
 const App = () => {
 
   const [chatHistory, setChathistory] = useState([])
-  const [showChatbot, setshowChatbot] = useState(true)
+  const [showChatbot, setshowChatbot] = useState(false)
   const bodyRef = useRef();
   const updateHistory = (text, isError = false) => {
     setChathistory(prev => [...prev.filter(msg => msg.text !== "Thinking..."), { role: "model", text, isError }])
@@ -28,13 +28,14 @@ const App = () => {
       updateHistory(geminiResponse);
 
     } catch (e) {
-      updateHistory(e.message.true)
+      updateHistory(e.message ,true)
     }
-
-    useEffect(() => {
-      bodyRef.current.scrollTo({ top: bodyRef.current.scrollHeight, behavoir: "smooth" })
-    }, [chatHistory])
   }
+
+  useEffect(() => {
+    bodyRef.current.scrollTo({ top: bodyRef.current.scrollHeight, behavior: "smooth" })
+  }, [chatHistory])
+
   return (
     <div className={`container ${showChatbot ? "show-chatbot" : ""}`}>
 
