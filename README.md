@@ -33,7 +33,7 @@ AI-Chatbot/
 
 ## 📸 Screenshot 
 
-![AI-Chatbot Screenshot](screenshot/Screenshot.jpg)
+(Screenshot/Screenshot.jpg)
 ## 🔧 Installation
 ### 1️⃣ Clone the Repository
 ```sh
