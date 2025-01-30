@@ -31,6 +31,9 @@ AI-Chatbot/
 │── README.md
 ```
 
+## 📸 Screenshot 
+
+![AI-Chatbot Screenshot](screenshot/Screenshot.jpg)
 ## 🔧 Installation
 ### 1️⃣ Clone the Repository
 ```sh
